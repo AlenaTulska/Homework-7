@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+// Homework 7.1
+function createSum() {
+let total = 0;
+return function(num) {
+    total += num;
+    return total;
+}
+}
+const sum = createSum();
+console.log(sum);
+
+
+// Homework 7.2
+function multiply(a) {
+    return function(b) {
+        return a * b;
+    };
+}
+
+
+// Homework 7.3
+
+function callForNumber() {
+    let userInput;
+    for (let i = 0; i < 10; i++) {
+        userInput = prompt("Введіть число більше 100");
+        if (userInput === null) {
+            console.log("Шкода, що ви скасували введення");
+            return;
+        }
+        userInput = Number(userInput);
+        if (userInput > 100) {
+            console.log(userInput);
+            return;
+        }
+    }
+    console.log(userInput);
+}
+
+callForNumber();
+</script>  
+</body>
+</html>
+
